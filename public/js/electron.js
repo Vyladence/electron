@@ -279,12 +279,15 @@ $(document).ready(function () {
         }
 
         let osc;
+        let channelHeader;
         if (channelName == 'left') {
             osc = leftOsc;
             rampInfo.left.rate = 0;
+            channelHeader = document.getElementById("left-channel-column").children[0]
         } else if (channelName == 'right') {
             osc = rightOsc;
             rampInfo.right.rate = 0;
+            channelHeader = document.getElementById("right-channel-column").children[0]
         }
 
         const wasRunning = osc.started;
@@ -296,6 +299,8 @@ $(document).ready(function () {
 
         let timer = 0;
 
+        channelHeader.style.backgroundColor = "#c6304b"
+        channelHeader.children[0].innerHTML += " - PAIN ACTIVE"
         // for each shock we set a timeout increasing the volume to the specified value
         // and then another one setting it to 0, in order to create the sharp shock
         // effect
@@ -307,6 +312,8 @@ $(document).ready(function () {
                 // last shock, let's restore the previous parameters
                 setTimeout(() => {
                     painInProgress = false;
+                    channelHeader.style.backgroundColor = ""
+                    channelHeader.children[0].innerHTML = channelHeader.children[0].innerHTML.replace(" - PAIN ACTIVE","")
                     if (wasRunning) {
                         window.applyChanges(channelName);
                     } else {

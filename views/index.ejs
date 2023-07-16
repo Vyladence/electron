@@ -66,49 +66,29 @@
         <br>
         <ol>
           <li>
-            <strong>What is electron exactly?</strong>
+            <strong>What is Electron exactly?</strong>
             <p>
-              electron is a web application under development designed to be an easy to setup
-              and easy to use solution for solo or remote e-stim.
-            </p>
-          </li>
-          <li>
-            <strong>What should I do if it does not work properly?</strong>
-            <p>
-              First of all, make sure you are visiting the web application using the latest version
-              of Google Chrome or Mozilla Firefox. Other browsers have not been tested.
-            </p>
-          </li>
-          <li>
-            <strong>What does A.M. mean?</strong>
-            <p>
-              A.M. stands for Amplitude Modulation. Basically it means the signal's amplitude (volume)
-              will be altered following the shape of another wave. A quick example: If you have your volume
-              set to 55% and set A.M. Type to Sine, A.M. Depth to 13% and A.M. Frequency to 3Hz that means
-              the signal will oscillate between 42% (55-13) and 68% (55+13) three times per second (3Hz) following
-              a sine wave's shape (i.e. smoothly).
+              Electron is a web application designed to be an easy to setup
+              and easy to use solution for on-demand solo or remote e-stim.
             </p>
           </li>
           <li>
             <strong>How do I use it for remote e-stim?</strong>
             <p>
-              First of all the driver should get into the website and click the "Create Session" button.
-              There, they will get a Session ID, which will look something like "73cJMc9Plx", it's a combination
-              of 10 letters and numbers. Afterwards, any number of riders can get into the website and paste
-              that code into the input field that says "Session ID" under the Join Session section. After doing
-              that, they will be taken to the sound player screen and any changes the driver makes to the signal
-              will be sent to them and played. Please keep in mind that the Session Id is case-sensitive and
-              sometimes a lowercase "L" and an uppercase "I" can look very similar. The best way to go is to
-              copy and paste.
+              The driver should first open Electron and click the "Create Session" button. This will take them to
+              the driving page which will include a link that they can share with riders. Any number of riders can 
+              join a session, however there can only be one driver. Once you have a session link, paste it into 
+              your browser. This will take you to the player page. Once you are ready to ride, click the button at
+              the top of the page to start audio output.
             </p>
           </li>
           <li>
-            <strong>Does it work on mobile devices?</strong>
+            <strong>I keep getting an error when trying to join a session. What do I do?</strong>
             <p>
-              I have only ran very few and very quick tests but it would seem the answer is yes! At least
-              using Google Chrome on the latest version of Android. That would mean you could drive or be
-              driven pretty much anywhere in the world as long as you have an internet connection handy.
-              Being driven around on public is now a very real possibility.
+              Make sure you're using the correct instance. There are 3 primary public instances and likely even more 
+              that aren't well-known. For electron to work, the driver and riders have to be using the same instance.
+              For example, if the driver is using <a href="#">electron-estim.com</a>, everyone trying to join that 
+              session has to also use <a href="#">electron-estim.com</a>
             </p>
           </li>
           <li>
@@ -116,24 +96,46 @@
             <p>
               You are probably trying to drive a session someone else is driving. Or perhaps you
               simply refreshed the page while driving someone. If you do that <strong>you will lose
-                control of the session forever</strong>. electron is a stateless application, which
+              control of the session forever</strong>. electron is a stateless application, which
               means we do not track who's doing what. If you close a session you were driving and open
               it again or even refresh the page you will lose control of the session. The good part
               is that you can easily create a new one and make people join again!
             </p>
           </li>
           <li>
-            <strong>What license is this software distributed under?</strong>
+            <strong>How do A.M. and F.M. work for stim signals?</strong>
             <p>
-              electron is distributed under the MIT License. Basically that means you can do whatever you
-              desire with the software and that no warranty of any kind is given so the author shall not be
-              liable for any damages arising from the use of the software.
+              Basically it means the signal's volume (A.M.) or frequency (F.M.) will be altered following the
+              shape of another wave. A quick example: If you have your volume set to 50%, A.M. Type set to Sine, 
+              A.M. Depth to 10%, and A.M. Frequency to 3Hz, the signal will oscillate between 60% (50%+10%) and
+              40% (50%-10%) volume three times per second (3Hz) following a sine wave's shape (i.e. smoothly).
             </p>
           </li>
           <li>
-            <strong>Where can I find the source code?</strong>
+            <strong>Does it work on mobile devices?</strong>
             <p>
-              The source code is available on GitHub here: <a href="https://github.com/fallenangel42/electron" target="_blank">https://github.com/fallenangel42/electron</a>
+              I have only run a few quick tests but it would seem the answer is yes! Riding, driving, and Solo Play
+              appear to be fully functional using Google Chrome or Firefox on the latest version of Android.
+              Other browsers or devices are likely no different. 
+            </p>
+          </li>
+          <li>
+            <strong>I found a bug! Where can I report it?</strong>
+            <p>
+              The best place to report bugs in Electron is on the GitHub issues page which can be found 
+              <a href="https://github.com/fallenangel42/electron/issues">here.</a> I can also be found 
+              on Discord in <a href="https://discord.gg/9BGtaHRtMM">Joanne's E-Stim Community</a>, 
+              <a href="https://discord.gg/UqRucu7">Open Estim Chat</a>, or 
+              <a href="https://discord.gg/VXYYduDX4T">eStimStation</a>
+            </p>
+          </li>
+          <li>
+            <strong>Is Electron open source?</strong>
+            <p>
+              Yes! Electron is distributed under the MIT License which basically that means you can do whatever you
+              want with the software, however that no warranty of any kind is given so the author shall not be
+              liable for any damages arising from the use of the software.
+              <br>The source code is available on GitHub here: <a href="https://github.com/fallenangel42/electron" target="_blank">https://github.com/fallenangel42/electron</a>
             </p>
           </li>
         </ol>

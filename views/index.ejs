@@ -61,7 +61,16 @@
     </div>
 
     <div id="faq" class="footnotes">
-      <h2 style="cursor:pointer;" onclick="document.getElementById('faq-content').style.maxHeight='2000px'">Frequently Asked Questions <span>(please read if you are new here!)</span></h2>
+      <h2 style="cursor:pointer;display:flex;" onclick="document.getElementById('faq-content').style.maxHeight='2000px';this.children[0].style.transform = 'rotate(0deg)'">
+        <svg width="20px" height="20px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="transform:rotate(180deg);margin-block:auto;margin-right:10px;transition:250ms;" id="faq-arrow">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="drop" fill="currentColor" transform="translate(32.000000, 42.666667)">
+              <path d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z" id="Combined-Shape"></path>
+            </g>
+          </g>
+        </svg>
+        Frequently Asked Questions <span>(please read if you are new here!)</span>
+      </h2>
       <div style="max-height: 0; overflow: hidden; transition: max-height 500ms ease-in-out;" id="faq-content">
         <br>
         <ol>
@@ -137,7 +146,7 @@
             </p>
           </li>
         </ol>
-        <button class="home-btn" style="margin-bottom: 10px;" onclick="document.getElementById('faq-content').style.maxHeight='0'">Click here to close the FAQ</button>
+        <button class="home-btn" style="margin-bottom: 10px;" onclick="document.getElementById('faq-content').style.maxHeight='0';document.getElementById('faq-arrow').style.transform = 'rotate(180deg)'">Click here to close the FAQ</button>
       </div>
     </div>
 
